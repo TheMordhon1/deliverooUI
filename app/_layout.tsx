@@ -1,6 +1,6 @@
 
+import CustomHeader from '@/Components/CustomHeader';
 import { Stack } from 'expo-router';
-import CustomHeader from '../components/CustomHeader';
 
 export {
   // Catch any errors thrown by the Layout component.
