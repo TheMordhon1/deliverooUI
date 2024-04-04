@@ -5,6 +5,7 @@ import { Link } from "expo-router";
 import React, { useRef } from "react";
 import {
   Image,
+  Keyboard,
   Platform,
   SafeAreaView,
   StatusBar,
@@ -25,7 +26,7 @@ const SearchBar = () => (
         placeholder="Restaurants, groceries, dishes"
       />
     </View>
-    <Link href={"/"} asChild>
+    <Link href={"/(modal)/filter"} asChild>
       <TouchableOpacity style={style.optionButton}>
         <Ionicons name="options-outline" color={Colors.primary} size={20} />
       </TouchableOpacity>
@@ -38,9 +39,12 @@ const CustomHeader = () => {
 
   const handleModal = () => {
     bottomSheetRef?.current?.present();
+    Keyboard.dismiss();
   };
+  console.log(bottomSheetRef.current);
   return (
     <SafeAreaView style={style.safeArea}>
+      <StatusBar barStyle="dark-content" />
       <BottomSheet ref={bottomSheetRef} />
       <View style={style.container}>
         <TouchableOpacity onPress={handleModal}>

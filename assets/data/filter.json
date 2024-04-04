@@ -1,0 +1,22 @@
+[
+  { "name": "Burger", "count": 25 },
+  { "name": "Pizza", "count": 20 },
+  { "name": "Salad", "count": 15 },
+  { "name": "Pasta", "count": 18 },
+  { "name": "Sandwich", "count": 22 },
+  { "name": "Steak", "count": 12 },
+  { "name": "Soup", "count": 10 },
+  { "name": "Sushi", "count": 14 },
+  { "name": "Chicken Wings", "count": 30 },
+  { "name": "Tacos", "count": 17 },
+  { "name": "Ramen", "count": 21 },
+  { "name": "Fries", "count": 28 },
+  { "name": "Nachos", "count": 16 },
+  { "name": "Fish and Chips", "count": 19 },
+  { "name": "Quesadilla", "count": 13 },
+  { "name": "Caesar Salad", "count": 24 },
+  { "name": "Lasagna", "count": 11 },
+  { "name": "Calamari", "count": 9 },
+  { "name": "Milkshake", "count": 26 },
+  { "name": "Ice Cream", "count": 23 }
+]
