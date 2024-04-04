@@ -41,7 +41,7 @@ const CustomHeader = () => {
     bottomSheetRef?.current?.present();
     Keyboard.dismiss();
   };
-  console.log(bottomSheetRef.current);
+
   return (
     <SafeAreaView style={style.safeArea}>
       <StatusBar barStyle="dark-content" />
@@ -53,7 +53,7 @@ const CustomHeader = () => {
             source={require("@/assets/images/bike.png")}
           />
         </TouchableOpacity>
-        <TouchableOpacity style={style.titleContainer}>
+        <TouchableOpacity style={style.titleContainer} onPress={handleModal}>
           <Text style={style.title}>Delivery · Now</Text>
           <View style={style.locationName}>
             <Text style={style.subTitle}>Bogor, Jawa Barat</Text>

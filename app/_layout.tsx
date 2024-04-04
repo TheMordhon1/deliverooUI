@@ -31,10 +31,28 @@ export default function RootLayoutNav() {
           options={{
             presentation: "modal",
             headerTitle: "Filters",
+            headerTitleAlign: "center",
             headerShadowVisible: false,
             headerStyle: {
               backgroundColor: Colors.lighGrey,
             },
+            headerLeft: () => (
+              <TouchableOpacity onPress={() => navigation.goBack()}>
+                <Ionicons
+                  name="close-outline"
+                  size={28}
+                  color={Colors.primary}
+                />
+              </TouchableOpacity>
+            ),
+          }}
+        />
+        <Stack.Screen
+          name="(modal)/location-search"
+          options={{
+            presentation: "fullScreenModal",
+            headerTitle: "Search Location",
+            headerTitleAlign: "center",
             headerLeft: () => (
               <TouchableOpacity onPress={() => navigation.goBack()}>
                 <Ionicons

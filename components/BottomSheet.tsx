@@ -7,6 +7,7 @@ import {
 } from "@gorhom/bottom-sheet";
 import Colors from "@/constants/Colors";
 import { Ionicons } from "@expo/vector-icons";
+import { Link } from "expo-router";
 
 export type Ref = BottomSheetModal;
 export type ToggleState = {
@@ -86,11 +87,13 @@ const BottomSheet = forwardRef<Ref>((props, ref) => {
         </View>
 
         <Text style={styles.subHeader}>Your Location</Text>
-        <TouchableOpacity style={styles.item}>
-          <Ionicons name="location-outline" size={20} color={Colors.medium} />
-          <Text style={styles.textItem}>Current location</Text>
-          <Ionicons name="chevron-forward" size={20} color={Colors.primary} />
-        </TouchableOpacity>
+        <Link href="/(modal)/location-search" asChild>
+          <TouchableOpacity style={styles.item} onPress={() => dismiss()}>
+            <Ionicons name="location-outline" size={20} color={Colors.medium} />
+            <Text style={styles.textItem}>Current location</Text>
+            <Ionicons name="chevron-forward" size={20} color={Colors.primary} />
+          </TouchableOpacity>
+        </Link>
         <Text style={styles.subHeader}>Arrival Time</Text>
         <TouchableOpacity style={styles.item}>
           <Ionicons name="stopwatch-outline" size={20} color={Colors.medium} />
