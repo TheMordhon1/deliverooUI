@@ -34,6 +34,7 @@ export const restaurants = [
     img: require('@/assets/data/r1.jpeg'),
     tags: ['Italian', 'Pizza', 'Pasta', 'Salads'],
     duration: '35 - 45',
+    isFreeDelivery: true,
   },
   {
     name: '✨Urban Greens✨',
@@ -44,6 +45,7 @@ export const restaurants = [
     img: require('@/assets/data/r2.jpeg'),
     tags: ['Salads', 'Vegan', 'Healthy', 'British'],
     duration: '15 - 30',
+    isFreeDelivery: false,
   },
   {
     name: 'El Minero',
@@ -54,5 +56,6 @@ export const restaurants = [
     img: require('@/assets/data/r3.jpeg'),
     tags: ['Spanish', 'Salads', 'Tpas', 'Pasta'],
     duration: '25 - 45',
+    isFreeDelivery: true,
   },
 ];
