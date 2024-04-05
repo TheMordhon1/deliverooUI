@@ -20,7 +20,7 @@ const Restaurants = () => {
       contentContainerStyle={{ paddingHorizontal: 15, marginTop: 15 }}
     >
       {restaurants.map((item, index) => (
-        <Link key={index} href="/" asChild>
+        <Link key={index} href="/(modal)/details" asChild>
           <TouchableOpacity style={styles.restaurantCard}>
             <View style={styles.imageContainer}>
               <Image source={item.img} style={styles.restaurantImage} />
