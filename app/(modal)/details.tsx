@@ -86,7 +86,21 @@ const Details = () => {
   }, []);
 
   const renderItem: ListRenderItem<any> = ({ item, index }) => (
-    <Link href="/" asChild>
+    <Link
+      href={{
+        pathname: "/(modal)/dish",
+        params: {
+          item: item,
+          id: item.id,
+          name: item.name,
+          info: item.info,
+          price: item.price,
+          img: item.img,
+        },
+      }}
+      asChild
+      key={index}
+    >
       <TouchableOpacity style={styles.renderItem}>
         <View style={styles.itemLeft}>
           <Text style={styles.itemName}>{item.name}</Text>
@@ -159,9 +173,13 @@ const Details = () => {
           />
         </View>
       </ParallaxScrollView>
-      <Animated.View style={[styles.stickyCategoriesContainer, animatedStyle]}>
+      <Animated.View
+        collapsable={false}
+        style={[styles.stickyCategoriesContainer, animatedStyle]}
+      >
         <ScrollView
           horizontal
+          collapsable={false}
           ref={scrollViewRef}
           showsHorizontalScrollIndicator={false}
           contentContainerStyle={{

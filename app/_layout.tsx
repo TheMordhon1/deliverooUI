@@ -81,6 +81,31 @@ export default function RootLayoutNav() {
             ),
           }}
         />
+        <Stack.Screen
+          name="(modal)/dish"
+          options={{
+            presentation: "modal",
+            headerTitle: "",
+            headerTransparent: true,
+            headerShadowVisible: false,
+            headerLeft: () => (
+              <TouchableOpacity
+                onPress={() => navigation.goBack()}
+                style={{
+                  backgroundColor: "#FFFFFF",
+                  borderRadius: 20,
+                  padding: 6,
+                }}
+              >
+                <Ionicons
+                  name="close-outline"
+                  size={28}
+                  color={Colors.primary}
+                />
+              </TouchableOpacity>
+            ),
+          }}
+        />
       </Stack>
     </BottomSheetModalProvider>
   );
